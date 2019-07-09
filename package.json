@@ -4,8 +4,9 @@
   "description": "This is a react starter kit to avoid using create react app",
   "main": "src/index.js",
   "scripts": {
-    "dev": "webpack-dev-server --config build-utils/webpack.config.js --env.env=dev",
-    "build": "webpack --config build-utils/webpack.config.js --env.env=prod",
+    "dev": "webpack-dev-server --config utils/build/webpack.config.js --env.env=dev",
+    "build": "webpack --config utils/build/webpack.config.js --env.env=prod",
+    "build:analyze": "npm run build -- --env.addon=bundleanalyze --env.addon=bundlevisualizer",
     "format": "prettier \"src/**/*.{js,jsx,css,html}\" --write",
     "lint": "eslint \"src/**/*.{js,jsx,css,html}\" --quiet",
     "test": "jest"
@@ -22,6 +23,7 @@
     "@babel/core": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
     "@babel/preset-react": "^7.0.0",
+    "@hot-loader/react-dom": "^16.8.6",
     "@testing-library/react": "^8.0.4",
     "@testing-library/react-hooks": "^1.0.4",
     "babel-eslint": "^10.0.2",
@@ -30,6 +32,7 @@
     "clean-webpack-plugin": "^3.0.0",
     "cross-env": "^5.2.0",
     "css-loader": "^3.0.0",
+    "dotenv-webpack": "^1.7.0",
     "eslint": "^6.0.1",
     "eslint-config-import": "^0.13.0",
     "eslint-config-prettier": "^6.0.0",
@@ -46,7 +49,10 @@
     "react-test-renderer": "^16.8.6",
     "style-loader": "^0.23.1",
     "webpack": "^4.35.2",
+    "webpack-bundle-analyzer": "^3.3.2",
     "webpack-cli": "^3.3.5",
-    "webpack-dev-server": "^3.7.2"
+    "webpack-dev-server": "^3.7.2",
+    "webpack-merge": "^4.2.1",
+    "webpack-visualizer-plugin": "^0.1.11"
   }
 }
