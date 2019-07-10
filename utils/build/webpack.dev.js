@@ -1,8 +1,10 @@
 const Dotenv = require("dotenv-webpack");
 
 module.exports = {
-  alias: {
-    "react-dom": "@hot-loader/react-dom"
+  resolve: {
+    alias: {
+      "react-dom": "@hot-loader/react-dom"
+    }
   },
   mode: "development",
   devtool: "eval-source-map",
