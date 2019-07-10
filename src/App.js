@@ -2,7 +2,7 @@ import { hot } from "react-hot-loader/root";
 import React from "react";
 
 const App = () => {
-  return <div>Hiad</div>;
+  return <div>Hi</div>;
 };
 
 export default hot(App);
