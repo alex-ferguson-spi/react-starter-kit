@@ -36,7 +36,8 @@ module.exports = {
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: "Webpack React Kit",
-      template: "./src/index.html"
+      template: "./src/index.html",
+      favicon: "./assets/reactFavicon.ico"
     })
   ]
 };
